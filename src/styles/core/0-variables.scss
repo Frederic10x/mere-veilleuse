@@ -1,0 +1,70 @@
+@custom-media --outer-content-width (min-width: 1320px);
+@custom-media --content-width (min-width: 1300px);
+
+:root {
+  // -------- COLORS
+  --black: 0, 0%, 0%;
+  --dark-grey: 0, 0%, 48%;
+  --light-grey: 0, 0%, 82%;
+  --white: 0, 0%, 100%;
+
+  --primary: 0, 36%, 90%;
+  --secondary: 0, 3%, 80%;
+
+  // -------- CONTENT WIDTH
+
+  --content-width: 1280px;
+
+  --outside-content-margin: 0px;
+  @media (--outer-content-width) {
+    --outside-content-margin: calc((100vw - var(--content-width)) / 2);
+  }
+
+  // -------- FONT FAMILIES
+
+  --content-font: sans-serif;
+
+  // -------- FONT SIZES
+
+  --title: 40px;
+  --h1: 32px;
+  --h2: 22px;
+  --h3: 20px;
+  --h4: 18px;
+  --p: 15px;
+  --label: 14px;
+  @media (min-width: 480px) {
+    --title: 50px;
+    --h1: 38px;
+    --h2: 27px;
+    --h3: 22px;
+    --h4: 20px;
+    --p: 15px;
+  }
+  @media (min-width: 992px) {
+    --title: 60px;
+    --h1: 44px;
+    --h2: 35px;
+    --h3: 29px;
+    --h4: 24px;
+    --p: 16px;
+  }
+
+  // -------- SHADOWS
+
+  --shadow-100: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-200: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-300: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-400: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+  --blur: 5px;
+
+  // -------- RADIUS
+
+  --radius-100: 2px;
+  --radius-200: 4px;
+  --radius-300: 8px;
+  --radius-400: 18px;
+  --radius-500: 22px;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}

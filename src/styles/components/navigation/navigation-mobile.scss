@@ -1,0 +1,17 @@
+@media (max-width: 991px) {
+  .navigation {
+    background-color: hsl(var(--primary));
+    padding: 10px;
+    @media (--outer-content-width) {
+      padding: 10px 0;
+    }
+  }
+
+  .navigation__inner {
+    max-width: var(--content-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
