@@ -1,13 +1,10 @@
 .menu__overlay {
-  --navigation: calc(var(--navigation-height) + var(--navigation-padding));
-
   position: fixed;
-  top: var(--navigation);
+  top: var(--navigation-height);
   background-color: hsl(var(--secondary));
   left: 0;
-  height: calc(100vh - var(--navigation));
-  width: 100vw;
-  padding: 20px;
+  height: calc(100% - var(--navigation-height));
+  width: 100%;
   opacity: 0;
   transform: translateX(100%);
   touch-action: none;
@@ -23,12 +20,19 @@
 
 .menu__overlay-wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 100px;
   height: 100%;
   width: 100%;
+  padding: 20px;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 }
 
 .menu__navigation {
-  flex: 1 0 50%;
+  position: relative;
+  flex: 1 1 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,11 +40,40 @@
   gap: 30px;
 }
 
+.menu__navigation::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: hsl(var(--primary));
+  @media (min-width: 992px) {
+    top: 0;
+    width: 3px;
+    height: 100%;
+  }
+}
+
 .menu__navigation-item {
   @include title;
   @include link;
+  color: hsl(var(--blue));
 }
 
 .menu__signature {
-  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 30%;
+  margin: 0 auto;
+  @include text($font-size: var(--h4));
+  color: hsl(var(--blue));
+  @media (min-width: 992px) {
+    margin: auto 0 0 0;
+  }
+}
+
+.menu__signature-title {
+  font-weight: 800;
 }

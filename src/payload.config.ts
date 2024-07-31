@@ -1,16 +1,15 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { slateEditor } from '@payloadcms/richtext-slate'
 import { fr } from '@payloadcms/translations/languages/fr'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import { Users } from './cms/collections/Users'
-import { Media } from './cms/collections/Media'
+import { Users, Media, Introduction } from './cms/collections'
 
-import { emailConfig } from '@/config/email'
+// import { emailConfig } from '@/config/email'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -27,9 +26,9 @@ export default buildConfig({
   i18n: {
     supportedLanguages: { fr },
   },
-  collections: [Users, Media],
-  email: emailConfig,
-  editor: lexicalEditor(),
+  collections: [Users, Media, Introduction],
+  // email: emailConfig,
+  editor: slateEditor({}),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

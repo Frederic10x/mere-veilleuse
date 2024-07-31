@@ -9,6 +9,7 @@ export const Media: CollectionConfig = {
     {
       name: 'alt',
       type: 'text',
+      label: "Texte pour décrire l'image",
       required: true,
     },
   ],

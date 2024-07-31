@@ -9,13 +9,14 @@
   --white: 0, 0%, 100%;
 
   --primary: 0, 36%, 90%;
-  --secondary: 0, 3%, 80%;
+  --secondary: 0, 0%, 83%;
+  --blue: 206, 18%, 40%;
 
   // -------- CONTENT WIDTH
 
-  --navigation-height: 50px;
+  --navigation-height: 60px;
   @media (min-width: 992px) {
-    --navigation-height: 70px;
+    --navigation-height: 80px;
   }
   --navigation-padding: 20px;
 

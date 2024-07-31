@@ -8,11 +8,12 @@
 
 export interface Config {
   auth: {
-    users: UserAuthOperations;
+    utilisateurs: UtilisateurAuthOperations;
   };
   collections: {
-    users: User;
+    utilisateurs: Utilisateur;
     media: Media;
+    introduction: Introduction;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -21,11 +22,11 @@ export interface Config {
   };
   globals: {};
   locale: null;
-  user: User & {
-    collection: 'users';
+  user: Utilisateur & {
+    collection: 'utilisateurs';
   };
 }
-export interface UserAuthOperations {
+export interface UtilisateurAuthOperations {
   forgotPassword: {
     email: string;
   };
@@ -43,9 +44,9 @@ export interface UserAuthOperations {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "users".
+ * via the `definition` "utilisateurs".
  */
-export interface User {
+export interface Utilisateur {
   id: number;
   updatedAt: string;
   createdAt: string;
@@ -79,13 +80,26 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "introduction".
+ */
+export interface Introduction {
+  id: number;
+  titre: string;
+  contenu: {
+    [k: string]: unknown;
+  }[];
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
   id: number;
   user: {
-    relationTo: 'users';
-    value: number | User;
+    relationTo: 'utilisateurs';
+    value: number | Utilisateur;
   };
   key?: string | null;
   value?:
