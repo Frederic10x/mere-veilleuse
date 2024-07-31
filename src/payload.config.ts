@@ -1,6 +1,7 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { fr } from '@payloadcms/translations/languages/fr'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -22,6 +23,9 @@ export default buildConfig({
       password: 'test',
       prefillOnly: true,
     },
+  },
+  i18n: {
+    supportedLanguages: { fr },
   },
   collections: [Users, Media],
   email: emailConfig,

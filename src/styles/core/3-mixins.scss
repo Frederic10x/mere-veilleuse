@@ -7,6 +7,7 @@
   $letter-spacing: 1px
 ) {
   font-size: $font-size;
+  font-family: var(--content-font);
   color: $color;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
@@ -70,5 +71,26 @@
     color: hsl($background-color);
     background-color: hsla($background-color, 30%);
     cursor: not-allowed;
+  }
+}
+
+@mixin link {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: hsl(var(--primary));
+    transition: transform 320ms var(--transition-easing);
+    content: '';
+  }
+  &:not(:disabled, [disabled]):hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
   }
 }

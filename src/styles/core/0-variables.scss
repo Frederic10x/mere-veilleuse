@@ -13,16 +13,18 @@
 
   // -------- CONTENT WIDTH
 
+  --navigation-height: 50px;
+  @media (min-width: 992px) {
+    --navigation-height: 70px;
+  }
+  --navigation-padding: 20px;
+
   --content-width: 1280px;
 
   --outside-content-margin: 0px;
   @media (--outer-content-width) {
     --outside-content-margin: calc((100vw - var(--content-width)) / 2);
   }
-
-  // -------- FONT FAMILIES
-
-  --content-font: sans-serif;
 
   // -------- FONT SIZES
 

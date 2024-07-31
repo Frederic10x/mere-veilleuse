@@ -1,4 +1,4 @@
 .logo {
-  @include title($bold: true, $color: hsl(var(--white)));
+  @include title($bold: false, $color: hsl(var(--white)));
   font-family: var(--title-font);
 }

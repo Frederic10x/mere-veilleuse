@@ -1,2 +1,46 @@
-.menu {
+.menu__overlay {
+  --navigation: calc(var(--navigation-height) + var(--navigation-padding));
+
+  position: fixed;
+  top: var(--navigation);
+  background-color: hsl(var(--secondary));
+  left: 0;
+  height: calc(100vh - var(--navigation));
+  width: 100vw;
+  padding: 20px;
+  opacity: 0;
+  transform: translateX(100%);
+  touch-action: none;
+  pointer-events: none;
+  transition: transform 420ms var(--transition-easing), opacity 240ms var(--transition-easing);
+}
+.menu[data-opened='true'] .menu__overlay {
+  opacity: 1;
+  transform: translateX(0);
+  touch-action: auto;
+  pointer-events: auto;
+}
+
+.menu__overlay-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.menu__navigation {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu__navigation-item {
+  @include title;
+  @include link;
+}
+
+.menu__signature {
+  margin-top: auto;
 }

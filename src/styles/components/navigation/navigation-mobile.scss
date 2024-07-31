@@ -1,5 +1,6 @@
 @media (max-width: 991px) {
   .navigation {
+    height: var(--navigation-height);
     background-color: hsl(var(--primary));
     padding: 10px;
     @media (--outer-content-width) {
@@ -8,6 +9,7 @@
   }
 
   .navigation__inner {
+    height: 100%;
     max-width: var(--content-width);
     display: flex;
     align-items: center;

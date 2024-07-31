@@ -1,0 +1,7 @@
+{
+  "home": {
+    "label": "Accueil",
+    "path": "/"
+  },
+  "contact": { "label": "Contact", "path": "/contact" }
+}
