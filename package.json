@@ -19,7 +19,7 @@
     "@payloadcms/plugin-cloud": "beta",
     "@payloadcms/richtext-lexical": "beta",
     "@payloadcms/richtext-slate": "3.0.0-beta.70",
-    "@payloadcms/storage-s3": "^3.0.0-beta.29",
+    "@payloadcms/storage-s3": "3.0.0-beta.70",
     "@types/nodemailer": "^6.4.15",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
