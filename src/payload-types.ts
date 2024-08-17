@@ -30,6 +30,7 @@ export interface Config {
 export interface UtilisateurAuthOperations {
   forgotPassword: {
     email: string;
+    password: string;
   };
   login: {
     email: string;
@@ -41,6 +42,7 @@ export interface UtilisateurAuthOperations {
   };
   unlock: {
     email: string;
+    password: string;
   };
 }
 /**
