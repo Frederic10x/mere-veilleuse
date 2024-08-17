@@ -1,0 +1,27 @@
+.gallery {
+  min-height: 1000px;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 10px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  cursor: pointer;
+}
+
+.gallery__image.two-cols {
+  grid-column: span 2;
+}
+
+.gallery__image.two-rows {
+  max-height: 810px;
+  grid-row: span 2;
+}

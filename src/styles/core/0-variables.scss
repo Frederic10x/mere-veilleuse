@@ -7,10 +7,12 @@
   --dark-grey: 0, 0%, 48%;
   --light-grey: 0, 0%, 82%;
   --white: 0, 0%, 100%;
+  --blue: 206, 18%, 40%;
+  --mid-blue: 216, 33%, 81%;
+  --light-blue: 214, 100%, 99%;
 
   --primary: 0, 36%, 90%;
   --secondary: 0, 0%, 83%;
-  --blue: 206, 18%, 40%;
 
   // -------- CONTENT WIDTH
 
@@ -31,26 +33,43 @@
 
   --title: 40px;
   --h1: 32px;
-  --h2: 22px;
+  --h2: 24px;
   --h3: 20px;
   --h4: 18px;
+  --h5: 16px;
+  --h6: 14px;
   --p: 15px;
   --label: 14px;
   @media (min-width: 480px) {
+    --title: 44px;
+    --h1: 34px;
+    --h2: 28px;
+    --h3: 24px;
+    --h4: 20px;
+    --h5: 16px;
+    --h6: 14px;
+    --p: 15px;
+    --label: 14px;
+  }
+  @media (min-width: 768px) {
     --title: 50px;
     --h1: 38px;
-    --h2: 27px;
-    --h3: 22px;
-    --h4: 20px;
-    --p: 15px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 18px;
+    --p: 16px;
   }
   @media (min-width: 992px) {
     --title: 60px;
     --h1: 44px;
-    --h2: 35px;
-    --h3: 29px;
-    --h4: 24px;
-    --p: 16px;
+    --h2: 36px;
+    --h3: 30px;
+    --h4: 26px;
+    --h5: 22px;
+    --h6: 20px;
+    --p: 18px;
   }
 
   // -------- SHADOWS

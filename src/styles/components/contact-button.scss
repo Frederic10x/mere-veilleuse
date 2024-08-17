@@ -1,0 +1,40 @@
+.contact-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(var(--white));
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-top-left-radius: var(--radius-300);
+  box-shadow: 5px 5px 10px hsl(var(--blue));
+  cursor: pointer;
+}
+
+.contact-button span {
+  opacity: 0;
+  color: hsl(var(--blue));
+  text-transform: uppercase;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: -10px;
+  transition: opacity 0.3s, margin-right 0.3s, max-width 0.3s ease-in-out;
+}
+
+.contact-button:is(:hover, :focus) span {
+  @media (min-width: 992px) {
+    margin-right: 0;
+    opacity: 1;
+    max-width: 200px;
+  }
+}
+
+.contact-button svg {
+  width: 30px;
+  height: 30px;
+  fill: hsl(var(--blue));
+}

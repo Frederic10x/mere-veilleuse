@@ -2,3 +2,18 @@
   @include title($bold: false, $color: hsl(var(--white)));
   font-family: var(--title-font);
 }
+
+.logo > svg {
+  width: 200px;
+  height: 33px;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 0;
+  animation: dash 3600ms ease-in-out forwards;
+  @media (min-width: 768px) {
+    height: 40px;
+  }
+  @media (min-width: 992px) {
+    height: 50px;
+    width: 400px;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import localFont from 'next/font/local'
-import { Roboto_Mono } from 'next/font/google'
+import { Vibur, Roboto } from 'next/font/google'
 import '@/styles/imports.scss'
 import Navigation from '@/components/navigation'
 
@@ -10,16 +10,27 @@ const titleFont = localFont({
   display: 'swap',
 })
 
-const contentFont = Roboto_Mono({
+const descriptionFont = Roboto({
+  subsets: ['latin'],
+  variable: '--description-font',
+  weight: ['400'],
+  display: 'swap',
+})
+
+const contentFont = Vibur({
   subsets: ['latin'],
   variable: '--content-font',
+  weight: ['400'],
   display: 'swap',
 })
 
 /* Our app sits here to not cause any conflicts with payload's root layout  */
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang="fr" className={`${titleFont.variable} ${contentFont.variable}`}>
+    <html
+      lang="fr"
+      className={`${titleFont.variable} ${contentFont.variable} ${descriptionFont.variable}`}
+    >
       <body>
         <Navigation />
         {children}

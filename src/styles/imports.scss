@@ -1,7 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './core/0-variables';
 @import './core/1-reset';
-@import './core/2-default';
-@import './core/3-mixins';
+@import './core/2-mixins';
+@import './core/3-default';
 @import './core/4-animations';
 
 @import './components/navigation/logo';
@@ -9,3 +13,13 @@
 @import './components/navigation/navigation-desktop';
 @import './components/navigation/navigation-mobile';
 @import './components/navigation/toggle';
+
+@import './components/collapsible';
+@import './components/contact-button';
+@import './components/gallery';
+@import './components/image';
+@import './components/rich-text';
+@import './components/zoomed-gallery';
+
+@import './pages/index';
+@import './pages/contact';

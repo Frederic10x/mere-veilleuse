@@ -51,7 +51,7 @@
   $hover-color: hsl(var(--grey-000)),
   $color: var(--white),
   $background-color: var(--primary),
-  // $hover-background-color: var(--primary)
+  $hover-background-color: var(--primary)
 ) {
   position: relative;
   width: max-content;
@@ -67,7 +67,27 @@
   user-select: none;
   z-index: 0;
   overflow: hidden;
-  // transition: color 420ms var(--transition-easing), background-color 420ms var(--transition-easing);
+  transition: color 420ms var(--transition-easing), background-color 420ms var(--transition-easing);
+  &:not(:disabled, [disabled]):hover {
+    color: hsl($background-color);
+  }
+  &:not(:disabled, [disabled])::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(var(--white));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 420ms var(--transition-easing);
+    z-index: -1;
+  }
+  &:not(:disabled, [disabled]):hover::after {
+    transform-origin: left;
+    transform: scaleX(100%);
+  }
   &:is(:disabled, [disabled]) {
     color: hsl($background-color);
     background-color: hsla($background-color, 30%);
@@ -75,18 +95,18 @@
   }
 }
 
-@mixin link {
+@mixin link($color: var(--white), $bottom: -2px, $stroke-width: 3px) {
   position: relative;
 
   &::before {
     position: absolute;
     left: 0;
-    bottom: 0;
-    height: 3px;
+    bottom: $bottom;
+    height: $stroke-width;
     width: 100%;
     transform: scaleX(0);
     transform-origin: right;
-    background-color: hsl(var(--blue));
+    background-color: hsl($color);
     transition: transform 320ms var(--transition-easing);
     content: '';
   }

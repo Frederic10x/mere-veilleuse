@@ -1,0 +1,44 @@
+.collapsible-wrapper {
+  // max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.collapsible.overflow {
+  position: relative;
+  overflow: hidden;
+}
+
+.collapsible.overflow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  /* --gradient-color is defined in the collapsible.tsx props */
+  background: linear-gradient(to top, var(--gradient-color), transparent);
+  transition: opacity 320ms var(--transition-easing, cubic-bezier(0.4, 0.1, 0.2, 0.9)),
+    padding-bottom 320ms var(--transition-easing, cubic-bezier(0.4, 0.1, 0.2, 0.9));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.collapsible.opened::after {
+  content: none;
+}
+
+button.message {
+  @include link(var(--primary));
+  font-size: var(--h3);
+  // font-style: italic;
+  letter-spacing: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 2;
+  animation: appears 3200ms forwards;
+}
+
+.opened .message {
+  bottom: 0;
+}

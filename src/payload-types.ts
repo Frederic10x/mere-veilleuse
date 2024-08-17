@@ -14,6 +14,7 @@ export interface Config {
     utilisateurs: Utilisateur;
     media: Media;
     introduction: Introduction;
+    images: Image;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -66,6 +67,7 @@ export interface Utilisateur {
 export interface Media {
   id: number;
   alt: string;
+  prefix?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -86,8 +88,33 @@ export interface Introduction {
   id: number;
   titre: string;
   contenu: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
     [k: string]: unknown;
-  }[];
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "images".
+ */
+export interface Image {
+  id: number;
+  nom: string;
+  image: number | Media;
+  orientation: 'normal' | 'two-rows' | 'two-cols';
+  position: number;
   updatedAt: string;
   createdAt: string;
 }

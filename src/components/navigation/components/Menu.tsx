@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Toggle from '@/components/navigation/components/Toggle'
-import { NavigationData, SignatureData } from '@/types/data'
+import Toggle from '@/components/navigation/components/toggle'
+import { NavigationData } from '@/types/data'
 import signatureData from '@/data/signature.json'
 import navigationData from '@/data/navigation.json'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ export default function Menu() {
             {Object.keys(navigationData).map((key) => {
               const { label, path } = navigationKeymap[key]
               return (
-                <Link key={key} href={path} className="menu__navigation-item">
+                <Link key={key} href={path} onClick={toggle} className="menu__navigation-item">
                   {label}
                 </Link>
               )
