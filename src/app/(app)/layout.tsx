@@ -1,8 +1,8 @@
 import React from 'react'
 import localFont from 'next/font/local'
 import { Vibur, Roboto } from 'next/font/google'
-import '@/styles/imports.scss'
-import Navigation from '@/components/navigation'
+import Navigation from '../../components/navigation'
+import '../../styles/imports.scss'
 
 const titleFont = localFont({
   src: '../../fonts/mystical_snow-webfont.woff2',

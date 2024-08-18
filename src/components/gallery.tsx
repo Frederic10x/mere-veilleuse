@@ -1,6 +1,6 @@
 'use client'
 import * as React from 'react'
-import { ImageContent } from '@/types/images'
+import { ImageContent } from '../types/images'
 import ZoomedGallery from './zoomed-gallery'
 
 export default function Gallery({ images }: { images: ImageContent[] }) {

@@ -1,10 +1,10 @@
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 import configPromise from '@payload-config'
-import { RichTextContent } from '@/types/rich-text'
-import { ImageContent } from '@/types/images'
-import Gallery from '@/components/gallery'
-import Introduction from './components/introduction'
-import ContactButton from '@/components/contact-button'
+// import { RichTextContent } from '@/types/rich-text'
+// import { ImageContent } from '@/types/images'
+// import Gallery from '@/components/gallery'
+// import Introduction from './components/introduction'
+import ContactButton from '../../components/contact-button'
 
 const Page = async () => {
   const payload = await getPayloadHMR({ config: configPromise })

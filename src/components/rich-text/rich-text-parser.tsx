@@ -1,6 +1,6 @@
 import serializeLexicalRichText from '@/utils/serializeLexicalRichText'
 import React from 'react'
-import { Node } from '@/types/rich-text'
+import { Node } from '../../types/rich-text'
 
 type Props = {
   className?: string

@@ -1,9 +1,9 @@
 'use client'
-import RichText from '@/components/rich-text'
-import Collapsible from '@/components/collapsible'
-import Image from '@/components/image'
 import { useEffect, useState } from 'react'
-import { RichTextContent } from '@/types/rich-text'
+import RichText from '../../../components/rich-text'
+import Collapsible from '../../../components/collapsible'
+import Image from '../../../components/image'
+import { RichTextContent } from '../../../types/rich-text'
 
 type Props = {
   introduction: RichTextContent
