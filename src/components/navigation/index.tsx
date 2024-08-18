@@ -1,5 +1,5 @@
-import Logo from '../navigation/components/logo'
-import Menu from '../navigation/components/menu'
+import Logo from '@/components/navigation/components/logo'
+import Menu from '@/components/navigation/components/menu'
 
 export default async function Navigation() {
   return (

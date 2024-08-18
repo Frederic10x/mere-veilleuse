@@ -1,6 +1,6 @@
 import { Toaster } from 'react-hot-toast'
 import Form from './components/form'
-import ContactButton from '../../../components/contact-button'
+import ContactButton from '@/components/contact-button'
 
 const Page = async () => {
   return (

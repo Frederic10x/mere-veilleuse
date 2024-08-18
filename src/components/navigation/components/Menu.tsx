@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import Toggle from './toggle'
-import { NavigationData } from '../../../types/data'
-import signatureData from '../../../data/signature.json'
-import navigationData from '../../../data/navigation.json'
+import Toggle from '@/components/navigation/components/toggle'
+import { NavigationData } from '@/types/data'
+import signatureData from '@/data/signature.json'
+import navigationData from '@/data/navigation.json'
 import Link from 'next/link'
 
 export default function Menu() {

@@ -1,5 +1,5 @@
-import RichTextParser from '../rich-text/rich-text-parser'
-import { RichTextContent } from '../../types/rich-text'
+import RichTextParser from '@/components/rich-text/rich-text-parser'
+import { RichTextContent } from '@/types/rich-text'
 
 type Props = {
   content: RichTextContent

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaHeart } from 'react-icons/fa'
 import { MdMail } from 'react-icons/md'
 
 export default async function ContactButton() {

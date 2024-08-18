@@ -3,7 +3,7 @@ import * as React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createPortal } from 'react-dom'
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa'
-import { ImageContent } from '../types/images'
+import { ImageContent } from '@/types/images'
 
 // Types pour les propriétés du composant
 interface ZoomedGalleryProps {
