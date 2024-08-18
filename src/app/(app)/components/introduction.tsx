@@ -3,15 +3,17 @@ import RichText from '@/components/rich-text'
 import Collapsible from '@/components/collapsible'
 import Image from '@/components/image'
 import { useEffect, useState } from 'react'
-import { RichTextContent } from '@/types/rich-text'
+import { IntroductionContent, RichTextContent, ImageContent } from '@/types/rich-text'
 
 type Props = {
-  introduction: RichTextContent
-  tracyImage: any
+  introduction: IntroductionContent
 }
 
-export default function Introduction({ introduction, tracyImage }: Props) {
+export default function Introduction({ introduction }: Props) {
   const [isMobile, setIsMobile] = useState(false)
+
+  const introductionRichText = introduction.contenu as RichTextContent
+  const introductionImage = introduction.image as ImageContent
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,10 +31,10 @@ export default function Introduction({ introduction, tracyImage }: Props) {
   return (
     <div className="presentation">
       <Collapsible height={isMobile ? 175 : 300}>
-        <RichText content={introduction} />
+        <RichText content={introductionRichText} />
       </Collapsible>
       <div className="presentation__image">
-        <Image src={tracyImage?.url || ''} fill alt={tracyImage?.alt} />
+        <Image src={introductionImage?.url || ''} fill alt={introductionImage?.alt} />
       </div>
     </div>
   )

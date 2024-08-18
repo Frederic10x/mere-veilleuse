@@ -2,6 +2,10 @@ import { CollectionConfig } from 'payload'
 
 export const Images: CollectionConfig = {
   slug: 'images',
+  labels: {
+    singular: 'Image de la grille',
+    plural: 'Images de la grille',
+  },
   admin: {
     useAsTitle: 'nom',
   },
@@ -43,9 +47,12 @@ export const Images: CollectionConfig = {
     {
       name: 'position',
       type: 'number',
-      min: 0,
+      admin: {
+        components: {
+          Field: 'src/cms/ui/position-select.tsx',
+        },
+      },
       required: true,
-      defaultValue: 0,
     },
   ],
 }

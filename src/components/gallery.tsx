@@ -6,6 +6,8 @@ import ZoomedGallery from './zoomed-gallery'
 export default function Gallery({ images }: { images: ImageContent[] }) {
   const [current, setCurrent] = React.useState<number | undefined>()
 
+  const isOddNumberOfImages = images.length % 2 !== 0
+
   const updateCurrent = (newCurrent: number | undefined) => {
     if (newCurrent !== undefined) {
       console.log('here')
@@ -22,7 +24,7 @@ export default function Gallery({ images }: { images: ImageContent[] }) {
   const showZoomedGallery = current !== undefined
 
   return (
-    <div className="gallery">
+    <div className={`gallery ${isOddNumberOfImages ? 'odd-number' : ''}`}>
       {images?.map((item, i) => {
         const { id, image, orientation } = item
         const { alt, url } = image

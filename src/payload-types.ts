@@ -104,6 +104,7 @@ export interface Introduction {
     };
     [k: string]: unknown;
   };
+  image: number | Media;
   updatedAt: string;
   createdAt: string;
 }

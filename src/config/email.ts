@@ -1,8 +1,8 @@
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 
 export const emailConfig = nodemailerAdapter({
-  defaultFromAddress: 'frederic.freelancing@gmail.com',
-  defaultFromName: 'Tracy Ferreira',
+  defaultFromAddress: 'tracy@mere-veilleuse.org',
+  defaultFromName: 'Mère veilleuse',
   transportOptions: {
     host: process.env.SMTP_HOST,
     port: 465,

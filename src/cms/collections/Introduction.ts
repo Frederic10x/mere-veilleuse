@@ -21,5 +21,11 @@ export const Introduction: CollectionConfig = {
       type: 'richText',
       required: true,
     },
+    {
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
   ],
 }

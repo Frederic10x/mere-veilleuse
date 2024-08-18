@@ -18,7 +18,7 @@ const Page = async () => {
             </p>
             <p>
               <span>- E-mail :</span>
-              <br /> frederic.freelancing@gmail.com
+              <br /> cardia.lima.tracy@orange.fr
             </p>
           </div>
           <div className="phone">

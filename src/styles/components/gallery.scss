@@ -1,5 +1,4 @@
 .gallery {
-  min-height: 1000px;
   height: 100%;
   width: 100%;
   display: grid;
@@ -18,10 +17,19 @@
 }
 
 .gallery__image.two-cols {
-  grid-column: span 2;
+  @media (min-width: 768px) {
+    grid-column: span 2;
+  }
 }
 
 .gallery__image.two-rows {
-  max-height: 810px;
-  grid-row: span 2;
+  @media (min-width: 768px) {
+    grid-row: span 2;
+    max-height: 810px;
+  }
+}
+.odd-number .gallery__image:last-child {
+  @media (max-width: 767px) {
+    grid-column: span 2;
+  }
 }

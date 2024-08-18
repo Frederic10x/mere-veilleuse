@@ -27,3 +27,29 @@ export type RichTextContent = {
     version?: number
   }
 }
+
+export type ImageContent = {
+  id: number
+  alt: string
+  prefix: string
+  updatedAt: string
+  createdAt: string
+  url: string
+  thumbnailURL: string | null
+  filename: string
+  mimeType: string
+  filesize: number
+  width: number
+  height: number
+  focalX: number
+  focalY: number
+}
+
+export type IntroductionContent = {
+  id: number
+  titre: string
+  contenu: RichTextContent
+  image: ImageContent
+  updatedAt: string
+  createdAt: string
+}

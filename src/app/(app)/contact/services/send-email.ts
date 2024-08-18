@@ -10,7 +10,7 @@ export const sendEmail = async (formData: FormData) => {
 
   try {
     await payload.sendEmail({
-      to: payload.email.defaultFromAddress,
+      to: 'cardia.lima.tracy@orange.fr',
       subject: object,
       html: formatMail(formData),
       replyTo: email,
