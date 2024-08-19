@@ -28,6 +28,8 @@ export default function Introduction({ introduction }: Props) {
     }
   }, [])
 
+  console.log('image', introductionImage)
+
   return (
     <div className="presentation">
       <Collapsible height={isMobile ? 175 : 300}>
