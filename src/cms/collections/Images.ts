@@ -1,3 +1,4 @@
+import { revalidatePath } from 'next/cache'
 import { CollectionConfig } from 'payload'
 
 export const Images: CollectionConfig = {
@@ -55,4 +56,7 @@ export const Images: CollectionConfig = {
       required: true,
     },
   ],
+  hooks: {
+    afterChange: [() => revalidatePath('/')],
+  },
 }

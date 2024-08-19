@@ -1,4 +1,5 @@
-import type { CollectionConfig } from 'payload'
+import { revalidatePath } from 'next/cache'
+import type { CollectionConfig, CollectionAfterChangeHook } from 'payload'
 
 export const Introduction: CollectionConfig = {
   slug: 'introduction',
@@ -28,4 +29,7 @@ export const Introduction: CollectionConfig = {
       required: true,
     },
   ],
+  hooks: {
+    afterChange: [() => revalidatePath('/')],
+  },
 }
