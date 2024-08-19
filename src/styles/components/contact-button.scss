@@ -37,4 +37,35 @@
   width: 30px;
   height: 30px;
   fill: hsl(var(--blue));
+  animation: shake 5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  2% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  5% {
+    transform: rotate(-10deg) scale(1.12);
+  }
+  7% {
+    transform: rotate(10deg) scale(1.15);
+  }
+  10% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  12% {
+    transform: rotate(10deg) scale(1.15);
+  }
+  15% {
+    transform: rotate(-10deg) scale(1.12);
+  }
+  17% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  20% {
+    transform: rotate(0deg) scale(1);
+  }
 }
