@@ -1,7 +1,6 @@
 'use client'
 import RichText from '@/components/rich-text'
 import Collapsible from '@/components/collapsible'
-import Image from '@/components/image'
 import { useEffect, useState } from 'react'
 import { IntroductionContent, RichTextContent, ImageContent } from '@/types/rich-text'
 
@@ -34,7 +33,7 @@ export default function Introduction({ introduction }: Props) {
         <RichText content={introductionRichText} />
       </Collapsible>
       <div className="presentation__image">
-        <Image src={introductionImage?.url || ''} fill alt={introductionImage?.alt || ''} />
+        <img src={introductionImage?.url || ''} alt={introductionImage?.alt || ''} />
       </div>
     </div>
   )

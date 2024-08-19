@@ -50,6 +50,11 @@
 }
 
 .presentation__image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   min-height: 200px;
   max-height: 500px;
   // transform: translateY(-50px);
