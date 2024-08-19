@@ -12,8 +12,8 @@ type Props = {
 export default function Introduction({ introduction }: Props) {
   const [isMobile, setIsMobile] = useState(false)
 
-  const introductionRichText = introduction.contenu as RichTextContent
-  const introductionImage = introduction.image as ImageContent
+  const introductionRichText = (introduction?.contenu as RichTextContent) || {}
+  const introductionImage = (introduction?.image as ImageContent) || {}
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,7 +34,7 @@ export default function Introduction({ introduction }: Props) {
         <RichText content={introductionRichText} />
       </Collapsible>
       <div className="presentation__image">
-        <Image src={introductionImage?.url || ''} fill alt={introductionImage?.alt} />
+        <Image src={introductionImage?.url || ''} fill alt={introductionImage?.alt || ''} />
       </div>
     </div>
   )
