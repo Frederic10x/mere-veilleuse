@@ -7,8 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'phreeounfbfqkldnzinn.supabase.co',
-        pathname: '/storage/v1/s3',
+        hostname: 'mere-veilleuse.org',
       },
     ],
   },
