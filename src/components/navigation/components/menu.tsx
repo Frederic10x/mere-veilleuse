@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Toggle from '@/components/navigation/components/toggle'
 import { NavigationData } from '@/types/data'
 import signatureData from '@/data/signature.json'
@@ -9,6 +9,18 @@ import Link from 'next/link'
 
 export default function Menu() {
   const [menuOpened, setMenuOpened] = useState(false)
+
+  useEffect(() => {
+    if (menuOpened) {
+      document.body.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
+    }
+
+    return () => {
+      document.body.classList.remove('no-scroll')
+    }
+  }, [menuOpened])
 
   const navigationKeymap = navigationData as NavigationData
 
